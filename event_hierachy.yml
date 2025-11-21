@@ -1,0 +1,291 @@
+################################################################################
+# EVENT HIERARCHY MODEL
+# Defines the nested event structure for fish pot trap sampling
+# This models the relationships between Cruise → Station → Deployment/Recovery
+# → Stratum → Pot → Occurrence
+################################################################################
+
+classes:
+  
+  Event:
+    description: >-
+      Base class for all sampling events. Maps to dwc:Event.
+      All events must have unique identifiers and can participate in 
+      parent-child hierarchies.
+    abstract: true
+    slots:
+      - eventID
+      - parentEventID
+      - eventDate
+      - eventRemarks
+    exact_mappings:
+      - dwc:Event
+    
+  Cruise:
+    description: >-
+      Top-level event representing an entire research cruise.
+      Encompasses all station visits during a single cruise period.
+      Maps to dwc:Event at the cruise level.
+    is_a: Event
+    slots:
+      - cruise_id
+      - datetime 
+      - lon_start
+      - lat_start
+      - lon_end
+      - lat_end
+      - participants
+    slot_usage:
+      eventID:
+        description: Cruise identifier (same as cruise_id)
+      parentEventID:
+        description: NULL for top-level event
+      eventDate:
+        description: ISO 8601 range for entire cruise duration
+    comments:
+      - Cruise is the top-level event with no parent
+      - eventID should be constructed from cruise_id
+      - footprintWKT POLYGON can be constructed from start/end coordinates
+    
+  StationSamplingEvent:
+    description: >-
+      A complete sampling event at a single station, encompassing both
+      deployment and recovery of pot trap array. Represents the full
+      temporal range from deployment to recovery.
+    is_a: Event
+    slots:
+      - station
+      - eventDate  # Range: deployment datetime to recovery datetime
+    slot_usage:
+      eventID:
+        description: Constructed from cruise_id + station (e.g., "2410_UM-15")
+      parentEventID:
+        description: References the Cruise eventID
+      eventDate:
+        description: ISO 8601 range from deployment to recovery
+    comments:
+      - This event encompasses both deployment and recovery child events
+      - eventDate is a range spanning the entire sampling period
+      
+  DeploymentEvent:
+    description: >-
+      The deployment of pot trap arrays at a station. This is one of the times when
+      environmental conditions and location are recorded. 
+    is_a: Event
+    slots:
+      - datetime
+      - lon_start
+      - lat_start
+      - depth
+      - wind_speed
+      - wind_dir
+      - wave_height
+      - cloud_cover_10th
+      - surf_temp_f
+      - ropeless_id
+      - hobo_id
+      - type
+    slot_usage:
+      eventID:
+        description: Constructed from station + "_deployment" (e.g., "2410_UM-15_deployment")
+      parentEventID:
+        description: References the StationSamplingEvent eventID
+      eventDate:
+        description: Maps to datetime slot (single point in time)
+    comments:
+      - All environmental measurements occur at deployment
+      - Coordinates represent deployment location
+      - type field should always be "deploy" for this event
+      
+  RecoveryEvent:
+    description: >-
+      The recovery of pot trap arrays from a station. This is when
+      catch data and biological measurements are obtained.
+    is_a: Event
+    slots:
+      - Recover_date  # Recovery datetime
+      - type  # Should be "recover"
+    slot_usage:
+      eventID:
+        description: Constructed from station + "_recovery" (e.g., "2410_UM-15_recovery")
+      parentEventID:
+        description: References the StationSamplingEvent eventID
+      eventDate:
+        description: Maps to Recover_date slot (single point in time)
+    comments:
+      - All catch data and measurements occur at recovery
+      - Strata and individual pots are children of this event
+      - type field should always be "recover" for this event
+      
+  StratumEvent:
+    description: >-
+      A spatial stratum (near or far) within a pot trap array.
+      Used to group pots and aggregate catch data by distance category.
+      Pooled measurements and subsampling occur at this level.
+    is_a: Event
+    slots:
+      - Near_Far  # "near" or "far"
+    slot_usage:
+      eventID:
+        description: Constructed from recovery + "_" + near_far (e.g., "2410_UM-15_recovery_near")
+      parentEventID:
+        description: References the RecoveryEvent eventID
+      eventDate:
+        description: Inherits from parent RecoveryEvent
+    comments:
+      - Represents a grouping of pots within the array
+      - Pooled measurements and subsampling metadata should reference this eventID
+      - Typically "near" pots 1-7 and "far" pots 8-15, but verify actual design
+      
+  PotEvent:
+    description: >-
+      An individual pot/trap deployment and recovery within a stratum.
+      Occurrences (individual fish caught) are linked to this event.
+    is_a: Event
+    slots:
+      - Pot_ID
+      - Pot_position  # Position in string (1-15)
+      - notes
+    slot_usage:
+      eventID:
+        description: Constructed from stratum + "_pot" + Pot_position (e.g., "2410_UM-15_recovery_near_pot3")
+      parentEventID:
+        description: References the StratumEvent eventID
+      eventDate:
+        description: Inherits from parent RecoveryEvent
+    comments:
+      - Individual pot within the array
+      - All Occurrences (caught fish) reference this pot's eventID
+      - Position (1-15) indicates location in string
+      
+  Occurrence:
+    description: >-
+      A single taxon occurrence (catch record) from a pot.
+      Represents one or more individuals of a species caught in a pot.
+      Maps to dwc:Occurrence.
+    slots:
+      - occurrenceID
+      - eventID  # References PotEvent
+      - Species
+      - Catch  # Individual count
+      - notes
+    exact_mappings:
+      - dwc:Occurrence
+    comments:
+      - Linked to PotEvent via eventID
+      - Catch field maps to dwc:individualCount
+      - Species maps to dwc:vernacularName
+      - One occurrence record per species per pot
+      
+  PooledMeasurement:
+    description: >-
+      Represents pooled biological measurements taken at the stratum level.
+      Taxa are pooled within strata, then subsampled for measurements.
+      Maps to Extended Measurement or Fact (eMoF).
+    slots:
+      - measurementID
+      - eventID  # References StratumEvent
+      - Species
+      - measurementType  # e.g., "sex", "weight", "length", "diet analysis"
+      - measurementValue
+      - measurementUnit
+      - measurementRemarks
+    related_mappings:
+      - dwc:MeasurementOrFact
+    comments:
+      - Links to StratumEvent (near or far) via eventID
+      - Example: "15 individuals subsampled per stratum for sex/weight/length"
+      - Example: "5 Black Sea Bass subsampled per stratum for diet analysis"
+      - measurementType describes what was measured
+      - Subsampling details should be in measurementRemarks
+
+################################################################################
+# SLOTS FOR EVENT HIERARCHY
+# (These would reference slots defined in individual slot files)
+################################################################################
+
+slots:
+  
+  eventID:
+    description: Unique identifier for the event
+    range: string
+    required: true
+    identifier: true
+    exact_mappings:
+      - dwc:eventID
+      
+  parentEventID:
+    description: Identifier of the parent event in hierarchy
+    range: string
+    exact_mappings:
+      - dwc:parentEventID
+    comments:
+      - NULL/empty for top-level Cruise events
+      - All other events must reference their parent
+      
+  occurrenceID:
+    description: Unique identifier for the occurrence record
+    range: string
+    required: true
+    identifier: true
+    exact_mappings:
+      - dwc:occurrenceID
+      
+  measurementID:
+    description: Unique identifier for the measurement record
+    range: string
+    required: true
+    identifier: true
+    exact_mappings:
+      - dwc:measurementID
+      
+  measurementType:
+    description: The nature of the measurement
+    range: string
+    exact_mappings:
+      - dwc:measurementType
+    examples:
+      - value: "total length"
+      - value: "weight"
+      - value: "sex"
+      - value: "diet analysis"
+      - value: "subsample size"
+      
+  measurementValue:
+    description: The value of the measurement
+    range: string
+    exact_mappings:
+      - dwc:measurementValue
+      
+  measurementUnit:
+    description: The units for the measurement value
+    range: string
+    exact_mappings:
+      - dwc:measurementUnit
+    examples:
+      - value: "mm"
+      - value: "g"
+      - value: "individuals"
+      
+  measurementRemarks:
+    description: Comments or notes about the measurement
+    range: string
+    exact_mappings:
+      - dwc:measurementRemarks
+    comments:
+      - Use to describe subsampling methodology
+      - Example: "15 individuals randomly selected from pooled catch"
+
+################################################################################
+# EXAMPLE EVENT ID CONSTRUCTION
+################################################################################
+
+# Cruise: "2410"
+# StationSamplingEvent: "2410_UM-15"
+# DeploymentEvent: "2410_UM-15_deployment"
+# RecoveryEvent: "2410_UM-15_recovery"
+# StratumEvent (near): "2410_UM-15_recovery_near"
+# StratumEvent (far): "2410_UM-15_recovery_far"
+# PotEvent: "2410_UM-15_recovery_near_pot3"
+# Occurrence: "2410_UM-15_recovery_near_pot3_occ1"
+# PooledMeasurement: "2410_UM-15_recovery_near_pooled_BSB_diet_1"

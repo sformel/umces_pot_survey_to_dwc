@@ -1,0 +1,509 @@
+Date,Station,Near_Far,Species,Total_Catch,Measurement_Count
+2024-11-20,UM-16,far,black sea bass,113,15
+2024-11-20,UM-16,near,black sea bass,71,15
+2023-06-07,K08,far,black sea bass,66,16
+2024-11-20,UK-13,far,black sea bass,63,15
+2022-08-03,C2208-2,far,black sea bass,77,30
+2023-06-07,P12,far,black sea bass,58,15
+2023-11-16,M12,far,black sea bass,57,15
+2023-06-07,C2306-2,far,black sea bass,56,15
+2023-11-16,L10,far,black sea bass,53,15
+2024-09-11,UG-10,far,black sea bass,51,15
+2023-06-07,O12,far,black sea bass,50,15
+2023-06-07,K08,near,black sea bass,47,15
+2024-09-11,UL-12,far,black sea bass,30,0
+2024-09-11,UG-10,near,black sea bass,44,15
+2022-08-03,C2208-2,near,black sea bass,55,30
+2023-11-16,C2311-1,far,black sea bass,37,15
+2023-06-28,N11,near,black sea bass,39,17
+2024-09-11,UL-11,far,black sea bass,37,15
+2023-10-05,O12,far,black sea bass,37,16
+2023-06-07,C2306-2,near,black sea bass,35,15
+2023-06-07,P12,near,black sea bass,34,15
+2024-11-20,C2411-1,far,black sea bass,28,10
+2023-11-16,C2311-2,far,black sea bass,32,15
+2023-06-07,O12,near,rock crab,15,0
+2023-10-05,C2310-1,near,scup,15,1
+2024-08-02,UM-16,far,rock crab,14,0
+2023-10-05,O12,near,black sea bass,29,15
+2023-10-25,K07,far,black sea bass,31,18
+2023-04-13,C2304-1,far,rock crab,13,0
+2022-08-31,C2209-1,far,rock crab,13,0
+2024-11-20,C2411-1,near,black sea bass,33,20
+2024-05-01,C2404-1,near,rock crab,12,0
+2022-08-31,K07,near,rock crab,12,0
+2022-08-31,J11,near,rock crab,12,0
+2024-11-20,UK-13,near,black sea bass,27,15
+2024-05-01,C2404-1,far,rock crab,11,0
+2023-10-05,C2310-2,far,black sea bass,25,15
+2023-06-07,O12,near,black sea bass,25,15
+2023-11-16,C2311-1,far,porgy,10,0
+2024-11-20,C2411-2,near,black sea bass,24,14
+2023-06-07,J11,far,black sea bass,25,15
+2024-11-20,C2411-2,far,black sea bass,25,16
+2024-08-02,C2407-2,far,rock crab,9,0
+2024-08-02,C2407-2,near,rock crab,9,0
+2023-06-07,J11,near,black sea bass,24,15
+2023-11-16,M12,near,black sea bass,24,15
+2024-05-01,UH-11,far,jonah crab,9,0
+2023-11-16,C2311-2,near,black sea bass,24,15
+2024-09-11,C2409-1,near,rock crab,9,0
+2023-10-05,C2310-2,far,sand dollar,9,0
+2024-09-11,UL-12,near,rock crab,9,0
+2022-08-31,K10,far,rock crab,8,0
+2022-08-03,J06,far,jonah crab,8,0
+2024-05-01,UM-15,far,rock crab,8,0
+2022-08-03,J06,near,jonah crab,8,0
+2023-07-26,N12,near,black sea bass,28,20
+2023-06-07,C2306-1,far,black sea bass,34,26
+2024-09-11,UL-11,near,black sea bass,23,15
+2023-11-16,L10,near,black sea bass,22,15
+2023-10-25,P12,near,black sea bass,22,15
+2023-11-16,C2311-1,near,black sea bass,22,15
+2023-10-25,P12,far,black sea bass,22,15
+2023-07-26,C2307-1,far,black sea bass,22,15
+2023-04-13,M10,far,rock crab,7,0
+2023-06-07,P12,far,rock crab,7,0
+2023-04-13,C2304-2,near,rock crab,7,0
+2022-08-31,J11,far,mud crab,7,0
+2022-08-03,C2208-1,near,jonah crab,7,0
+2024-08-02,UK-13,far,sea star,7,0
+2024-09-11,C2409-2,near,rock crab,6,0
+2024-08-02,UJ-11,far,rock crab,6,0
+2023-05-04,K12,far,black sea bass,26,20
+2023-07-26,C2307-2,far,rock crab,6,0
+2023-06-07,K08,near,rock crab,6,0
+2023-08-30,C2308-2,far,rock crab,6,0
+2022-06-30,L12,far,jonah crab,6,0
+2022-06-30,J11,far,jonah crab,6,0
+2023-11-16,J12,far,black sea bass,23,17
+2022-08-31,C2209-1,near,sea star,5,0
+2022-08-31,C2209-1,far,sea star,5,0
+2023-04-13,C2304-1,far,sea urchin,5,0
+2023-04-13,C2304-1,near,rock crab,5,0
+2022-06-30,C2206-2,near,jonah crab,5,0
+2023-04-13,L11,far,rock crab,5,0
+2023-05-04,C2305-1,far,rock crab,5,0
+2024-05-01,UM-15,near,rock crab,5,0
+2023-05-04,C2305-2,near,rock crab,5,0
+2023-10-25,J10,far,snail,5,0
+2023-11-16,J11,near,sand dollar,5,0
+2022-08-31,C2209-2,near,rock crab,5,0
+2022-08-31,O12,far,jonah crab,5,0
+2023-06-07,K08,far,rock crab,5,0
+2022-08-31,J11,far,rock crab,5,0
+2024-08-02,UK-13,far,rock crab,5,0
+2024-09-11,C2409-1,far,rock crab,5,0
+2023-04-13,K11,far,rock crab,5,0
+2023-06-28,C2306_2-2,far,jonah crab,5,0
+2022-08-31,C2209-1,near,rock crab,5,0
+2022-07-20,J06,far,jonah crab,5,0
+2024-05-01,UM-12,near,rock crab,4,0
+2024-08-02,UM-12,far,rock crab,4,0
+2024-08-02,UJ-11,near,rock crab,4,0
+2024-09-11,UL-14,near,rock crab,4,0
+2023-06-07,J11,far,rock crab,4,0
+2022-06-30,L12,near,jonah crab,4,0
+2023-04-13,K11,near,rock crab,4,0
+2023-06-28,L10,near,jonah crab,4,0
+2024-08-02,UM-16,near,rock crab,4,0
+2022-08-03,C2208-1,far,sand dollar,4,0
+2022-08-31,C2209-2,far,rock crab,4,0
+2024-09-11,UL-12,far,butterfish,4,0
+2023-07-26,C2307-1,far,rock crab,4,0
+2023-07-26,C2307-1,near,rock crab,4,0
+2022-08-03,L12,far,jonah crab,4,0
+2023-05-04,C2305-1,near,sand dollar,4,0
+2022-06-30,C2206-2,far,jonah crab,4,0
+2024-08-02,UM-12,near,rock crab,4,0
+2023-04-13,L11,near,rock crab,3,0
+2023-04-13,C2304-2,far,rock crab,3,0
+2023-06-28,L10,far,jonah crab,3,0
+2023-04-13,K11,far,sand dollar,3,0
+2023-04-13,M09,far,rock crab,3,0
+2022-07-20,N10,near,jonah crab,3,0
+2024-09-11,C2409-2,far,rock crab,3,0
+2023-08-30,N11,near,sea star,3,0
+2023-05-04,C2305-1,far,sand dollar,3,0
+2023-11-16,C2311-1,near,sand dollar,3,0
+2022-08-31,K10,near,rock crab,3,0
+2022-08-31,K10,near,mud crab,3,0
+2023-08-30,C2308-1,far,black sea bass,23,20
+2022-08-03,J12,far,jonah crab,3,0
+2023-08-30,N11,far,sea star,3,0
+2022-08-03,C2208-1,far,jonah crab,3,0
+2022-07-20,C2207-2,near,jonah crab,3,0
+2024-09-11,UL-14,far,rock crab,3,0
+2022-08-03,J12,near,sand dollar,3,0
+2022-08-03,J06,far,sand dollar,3,0
+2022-08-31,O12,far,rock crab,3,0
+2024-11-20,C2411-2,far,moon jelly,3,0
+2023-05-04,C2305-1,near,rock crab,3,0
+2022-08-03,J12,far,sand dollar,3,0
+2024-09-11,UL-12,far,rock crab,3,0
+2022-07-20,C2207-1,near,black sea bass,9,6
+2024-08-02,C2407-2,near,moon jelly,3,0
+2023-07-26,J07,far,rock crab,3,0
+2023-06-28,C2306_2-1,near,jonah crab,3,0
+2022-08-31,K07,far,rock crab,3,0
+2023-11-16,C2311-2,far,sand dollar,3,0
+2023-04-13,M09,near,rock crab,3,0
+2023-06-28,K08,far,jonah crab,3,0
+2023-11-16,J11,far,black sea bass,17,15
+2023-04-13,C2304-1,near,sea urchin,2,0
+2023-06-07,C2306-2,far,sea star,2,0
+2023-05-04,L12,near,rock crab,2,0
+2023-06-28,N11,far,jonah crab,2,0
+2022-08-03,C2208-2,far,jonah crab,2,0
+2024-08-02,UK-13,near,moon jelly,2,0
+2022-08-31,O12,near,rock crab,2,0
+2022-06-30,C2206-1,near,rock crab,2,0
+2022-07-20,J06,far,sea star,2,0
+2023-11-16,C2311-1,far,sand dollar,2,0
+2024-08-02,UM-12,near,moon jelly,2,0
+2024-05-01,C2404-1,near,sand dollar,2,0
+2023-06-28,O11,far,jonah crab,2,0
+2023-07-26,N12,far,rock crab,2,0
+2023-08-30,K12,far,rock crab,2,0
+2023-08-30,C2308-1,near,black sea bass,9,7
+2023-06-07,C2306-2,far,rock crab,2,0
+2023-07-26,K08,near,rock crab,2,0
+2023-07-26,J11,near,rock crab,2,0
+2024-08-02,UJ-11,far,moon jelly,2,0
+2024-05-01,UH-11,near,jonah crab,2,0
+2024-05-01,C2404-2,near,rock crab,2,0
+2023-08-30,L11,far,rock crab,2,0
+2024-05-01,C2404-2,far,rock crab,2,0
+2023-06-07,P12,near,rock crab,2,0
+2023-07-26,J11,near,sand dollar,2,0
+2023-06-28,C2306_2-1,far,black sea bass,3,1
+2023-10-05,C2310-1,far,?,2,0
+2023-05-04,C2305-2,far,sand dollar,2,0
+2023-07-26,J07,near,rock crab,2,0
+2023-06-07,C2306-1,far,rock crab,2,0
+2023-06-07,C2306-1,far,sand dollar,2,0
+2022-07-20,C2207-2,far,sand dollar,2,0
+2023-08-30,M10,near,rock crab,2,0
+2022-06-30,J11,near,jonah crab,2,0
+2022-08-03,J12,near,jonah crab,2,0
+2023-10-05,O12,far,scup,2,0
+2023-11-16,J11,near,black sea bass,16,14
+2023-10-25,C2310_2-2,near,sand dollar,2,0
+2022-07-20,J06,near,jonah crab,2,0
+2022-06-30,C2206-1,far,jonah crab,2,0
+2022-08-03,N12,near,jonah crab,2,0
+2022-08-31,C2209-2,far,black sea bass,24,22
+2024-08-02,C2407-1,far,rock crab,2,0
+2024-11-20,C2411-2,near,rock crab,1,0
+2024-11-20,UK-13,far,jonah crab,1,0
+2024-11-20,C2411-1,far,sand dollar,1,0
+2024-11-20,UK-13,near,moon jelly,1,0
+2024-11-20,UL-12,near,hermit crab,1,0
+2024-11-20,C2411-2,near,jonah crab,1,0
+2024-08-02,C2407-1,near,black sea bass,1,0
+2024-08-02,C2407-1,near,moon jelly,1,0
+2024-08-02,C2407-2,far,moon jelly,1,0
+2024-11-20,UK-13,far,n searobin,1,0
+2024-11-20,UK-13,far,sea star,1,0
+2022-08-03,L12,near,sand dollar,1,0
+2022-08-03,L12,near,seahorse,1,0
+2022-08-03,N12,far,jonah crab,1,0
+2024-09-11,C2409-1,far,jonah crab,1,0
+2022-07-20,C2207-2,near,black sea bass,2,1
+2022-07-20,C2207-2,near,sea star,1,0
+2022-07-20,J06,near,black sea bass,4,3
+2022-07-20,J06,near,sand dollar,1,0
+2022-07-20,J06,near,sea star,1,0
+2022-08-03,C2208-2,far,sand dollar,1,0
+2022-07-20,J10,near,jonah crab,1,0
+2023-11-16,J11,near,jonah crab,1,0
+2023-11-16,L10,near,sand dollar,1,0
+2023-10-25,C2310_2-2,far,sea star,1,0
+2023-10-05,M10,near,sand dollar,1,0
+2023-10-25,C2310_2-1,far,blue crab,1,0
+2023-10-25,C2310_2-1,near,sand dollar,1,0
+2023-10-25,C2310_2-2,far,sand dollar,1,0
+2023-08-30,N11,near,clam,1,0
+2023-10-25,K07,far,sand dollar,1,0
+2023-08-30,M10,near,black sea bass,3,2
+2023-08-30,N11,far,rock crab,1,0
+2022-07-20,J10,far,jonah crab,1,0
+2022-07-20,J10,far,sand dollar,1,0
+2022-07-20,J10,far,seahorse,1,0
+2022-07-20,C2207-1,near,sea star,1,0
+2022-06-30,J11,near,sand dollar,1,0
+2023-05-04,M12,near,jonah crab,1,0
+2022-08-03,J06,far,sea star,1,0
+2023-04-13,M10,far,black sea bass,5,4
+2023-04-13,M10,far,sea star,1,0
+2023-04-13,M10,near,rock crab,1,0
+2022-08-31,J11,far,sea star,1,0
+2022-08-31,J11,near,jonah crab,1,0
+2023-05-04,C2305-2,far,rock crab,1,0
+2022-08-31,C2209-2,near,jonah crab,1,0
+2022-08-31,J11,near,mud crab,1,0
+2022-08-31,K07,far,mud crab,1,0
+2023-05-04,C2305-2,near,sand dollar,1,0
+2023-07-26,J07,near,sand dollar,1,0
+2023-07-26,J11,far,sand dollar,1,0
+2023-07-26,C2307-1,near,black sea bass,16,15
+2023-07-26,K08,far,rock crab,1,0
+2023-07-26,C2307-2,near,sea star,1,0
+2023-06-07,O12,far,rock crab,1,0
+2023-06-28,C2306_2-1,far,jonah crab,1,0
+2024-05-01,C2404-2,far,sea star,1,0
+2024-05-01,C2404-2,near,black sea bass,9,8
+2024-05-01,UJ-11,far,rock crab,1,0
+2024-05-01,UM-12,far,jonah crab,1,0
+2024-05-01,UM-12,far,rock crab,1,0
+2024-05-01,UM-12,far,spider crab,1,0
+2024-05-01,UH-11,near,rock crab,1,0
+2023-10-25,P12,near,sea star,1,0
+2023-08-30,L11,far,lady crab,1,0
+2023-08-30,C2308-1,near,rock crab,1,0
+2023-08-30,C2308-2,far,sea star,1,0
+2023-08-30,L11,near,sand dollar,1,0
+2023-08-30,M10,far,sand dollar,1,0
+2023-08-30,M10,far,scallop,1,0
+2023-08-30,K12,near,sand dollar,1,0
+2023-08-30,K12,near,spider crab,1,0
+2023-08-30,L11,far,atl lobster,1,0
+2023-06-28,O11,near,jonah crab,1,0
+2023-07-26,C2307-1,far,spider crab,1,0
+2023-08-30,L11,far,sea horse,1,0
+2023-08-30,L11,far,sea star,1,0
+2023-08-30,L11,near,rock crab,1,0
+2023-07-26,C2307-2,far,sand dollar,1,0
+2023-07-26,C2307-2,far,sea star,1,0
+2023-07-26,C2307-2,near,rock crab,1,0
+2023-06-28,N11,near,jonah crab,1,0
+2023-10-05,C2310-2,near,sea star,1,0
+2023-10-05,C2310-2,far,?,1,0
+2023-10-05,M10,far,sea star,1,0
+2023-10-05,C2310-2,far,sea star,1,0
+2023-10-05,C2310-2,far,spider crab,1,0
+2023-08-30,C2308-1,far,jonah crab,1,0
+2023-08-30,C2308-1,far,spider crab,1,0
+2023-10-05,C2310-2,near,spider crab,1,0
+2023-06-07,C2306-2,near,jonah crab,1,0
+2023-06-07,J11,far,sand dollar,1,0
+2023-06-07,J11,far,spider crab,1,0
+2023-06-07,J11,near,sand dollar,1,0
+2023-06-07,K08,far,n searobin,1,0
+2023-04-13,M09,far,black sea bass,13,12
+2023-06-28,C2306_2-2,near,jonah crab,1,0
+2023-06-07,P12,far,sea star,1,0
+2023-06-28,L10,near,black sea bass,4,3
+2023-06-28,N11,far,black sea bass,16,15
+2023-06-28,C2306_2-2,far,sand dollar,1,0
+2023-06-28,L10,far,sea star,1,0
+2023-05-04,M12,far,rock crab,1,0
+2022-07-20,J10,near,sand dollar,1,0
+2022-07-20,N10,far,jonah crab,1,0
+2022-08-03,C2208-1,near,sand dollar,1,0
+2024-09-11,UL-12,far,summer flounder,1,0
+2024-09-11,UG-10,far,sand dollar,1,0
+2024-09-11,UG-10,far,sea star,1,0
+2024-09-11,UL-11,far,sand dollar,1,0
+2022-07-20,C2207-1,far,sand dollar,1,0
+2022-07-20,C2207-1,far,sea star,1,0
+2024-08-02,UJ-11,near,moon jelly,1,0
+2024-08-02,C2407-1,far,black sea bass,1,0
+2024-08-02,UK-13,far,hermit crab,1,0
+2024-08-02,UK-13,far,moon jelly,1,0
+2024-08-02,UK-13,near,sea star,1,0
+2024-08-02,UM-12,far,moon jelly,1,0
+2024-08-02,UM-12,near,hermit crab,1,0
+2024-08-02,UJ-11,near,sea star,1,0
+2024-05-01,C2404-1,far,sand dollar,1,0
+2024-05-01,C2404-1,far,spider crab,1,0
+2024-08-02,UK-13,near,rock crab,1,0
+2023-06-07,C2306-1,near,rock crab,1,0
+2023-07-26,N12,near,sea star,1,0
+2023-11-16,J12,far,sand dollar,1,0
+2023-11-16,C2311-2,far,?,1,0
+2022-08-31,C2209-1,far,sand dollar,1,0
+2022-08-31,C2209-1,near,jonah crab,1,0
+2024-09-11,C2409-2,far,sand dollar,1,0
+2022-08-31,K10,far,mud crab,1,0
+2022-08-31,K10,far,sand dollar,1,0
+2022-08-03,J12,far,mud crab,1,0
+2022-08-03,L12,near,jonah crab,1,0
+2022-06-30,C2206-2,far,black sea bass,9,8
+2024-11-20,C2411-1,near,lingcod,1,0
+2024-11-20,C2411-1,near,jonah crab,1,0
+2022-07-20,J06,far,sand dollar,1,0
+2022-06-30,C2206-2,far,scup,1,1
+2022-06-30,C2206-2,near,scup,1,1
+2022-06-30,J11,far,black sea bass,6,6
+2022-06-30,J11,far,spotted hake,1,1
+2022-06-30,J11,near,black sea bass,4,4
+2022-06-30,L12,far,scup,1,1
+2022-06-30,L12,near,black sea bass,1,1
+2024-11-20,UM-16,far,conger eel,2,2
+2024-09-11,UG-10,near,sea robin,3,3
+2024-11-20,C2411-1,far,conger eel,1,1
+2022-08-03,C2208-1,near,black sea bass,3,3
+2022-08-03,J06,far,black sea bass,4,4
+2022-07-20,N10,far,black sea bass,4,4
+2022-08-03,C2208-1,far,black sea bass,6,6
+2022-07-20,J10,far,black sea bass,3,3
+2023-08-30,M10,near,n searobin,3,3
+2023-08-30,N11,far,black sea bass,8,8
+2023-08-30,N11,near,black sea bass,5,5
+2023-10-25,J10,far,scup,5,5
+2023-10-25,J10,far,summer flounder,5,5
+2023-10-25,J10,near,black sea bass,4,4
+2023-10-25,J10,near,scup,1,1
+2023-10-25,K07,near,black sea bass,12,12
+2023-10-25,C2310_2-2,near,black sea bass,4,4
+2023-10-25,C2310_2-2,near,scup,1,1
+2023-10-25,J07,far,black sea bass,15,15
+2023-10-25,J07,far,scup,7,7
+2023-10-25,J07,near,black sea bass,6,6
+2023-10-25,J07,near,scup,4,4
+2023-10-25,J10,far,black sea bass,8,8
+2023-10-05,O12,near,summer flounder,1,1
+2023-10-25,C2310_2-1,near,scup,1,1
+2023-10-25,C2310_2-2,far,black sea bass,9,9
+2023-10-05,M10,far,windowpane,1,1
+2023-10-05,M10,near,black sea bass,3,3
+2023-10-05,M12,far,black sea bass,2,2
+2023-10-05,M12,near,black sea bass,1,1
+2023-10-05,M12,near,scup,1,1
+2023-11-16,J12,far,scup,2,2
+2023-11-16,J12,near,black sea bass,14,14
+2023-11-16,M12,far,porgy,2,2
+2023-11-16,C2311-2,near,porgy,2,2
+2023-11-16,C2311-2,far,porgy,1,1
+2023-08-30,K12,far,black sea bass,3,3
+2023-08-30,K12,near,black sea bass,2,2
+2023-07-26,N12,far,spotted hake,1,1
+2023-10-05,C2310-2,near,spot,1,1
+2023-10-05,K07,far,black sea bass,7,7
+2023-10-05,K07,far,scup,3,3
+2023-10-05,K07,far,triggerfish,1,1
+2023-10-05,K07,near,triggerfish,2,2
+2023-10-05,M10,far,black sea bass,1,1
+2023-10-05,C2310-2,far,scup,1,1
+2023-10-05,C2310-2,far,spot,1,1
+2023-10-05,C2310-2,near,black sea bass,12,12
+2023-10-05,C2310-2,near,scup,1,1
+2023-10-05,C2310-1,far,black sea bass,12,12
+2023-07-26,C2307-2,near,black sea bass,2,2
+2023-06-28,O11,far,black sea bass,4,4
+2023-06-28,O11,near,black sea bass,4,4
+2023-08-30,L11,near,black sea bass,4,4
+2023-08-30,K12,near,n searobin,1,1
+2023-08-30,L11,far,black sea bass,4,4
+2023-08-30,L11,far,n searobin,1,1
+2023-08-30,C2308-2,far,black sea bass,6,6
+2023-08-30,C2308-2,near,black sea bass,2,2
+2023-10-25,K07,near,scup,5,5
+2023-10-25,P12,far,scup,2,2
+2023-10-25,P12,near,scup,1,1
+2024-05-01,UM-12,near,black sea bass,7,7
+2024-05-01,UM-15,far,black sea bass,13,13
+2024-05-01,UM-15,near,black sea bass,6,6
+2024-05-01,UJ-11,far,black sea bass,3,3
+2024-05-01,UJ-11,far,scup,1,1
+2024-05-01,UJ-11,near,black sea bass,7,7
+2024-05-01,UM-12,far,black sea bass,7,7
+2024-05-01,UH-11,far,black sea bass,7,7
+2024-05-01,UH-11,near,black sea bass,10,10
+2024-05-01,C2404-1,far,black sea bass,9,9
+2023-07-26,J11,near,black sea bass,2,2
+2023-07-26,K08,far,black sea bass,4,4
+2023-07-26,K08,near,black sea bass,4,4
+2023-07-26,N12,far,black sea bass,10,10
+2023-07-26,J07,far,scup,1,1
+2023-07-26,J07,near,black sea bass,1,1
+2023-07-26,J11,far,black sea bass,3,3
+2023-07-26,C2307-2,far,black sea bass,4,4
+2023-05-04,M12,near,black sea bass,8,8
+2023-05-04,K09,far,black sea bass,14,14
+2023-05-04,K09,near,black sea bass,7,7
+2023-05-04,K12,near,black sea bass,11,11
+2023-05-04,L12,far,black sea bass,14,14
+2023-05-04,L12,near,black sea bass,14,14
+2023-06-28,C2306_2-2,far,black sea bass,8,8
+2023-06-28,C2306_2-2,near,black sea bass,4,4
+2023-06-28,K08,far,black sea bass,6,6
+2023-06-28,K08,near,black sea bass,7,7
+2023-04-13,L11,far,black sea bass,4,4
+2023-04-13,L11,near,black sea bass,5,5
+2023-04-13,C2304-2,far,black sea bass,11,11
+2023-04-13,C2304-2,near,black sea bass,3,3
+2023-04-13,K11,far,black sea bass,7,7
+2023-06-07,J11,far,scup,1,1
+2023-06-07,C2306-2,far,n searobin,1,1
+2024-05-01,C2404-1,near,black sea bass,3,3
+2024-05-01,C2404-2,far,black sea bass,12,12
+2024-08-02,UM-12,far,black sea bass,4,4
+2024-08-02,UM-12,near,black sea bass,3,3
+2024-08-02,UK-13,far,black sea bass,6,6
+2024-08-02,UK-13,near,black sea bass,15,15
+2024-08-02,C2407-2,near,black sea bass,6,6
+2024-08-02,UJ-11,near,black sea bass,3,3
+2022-08-31,O12,far,black sea bass,7,7
+2022-08-31,K07,far,black sea bass,2,2
+2022-08-31,K07,near,black sea bass,1,1
+2022-08-31,K10,far,black sea bass,12,12
+2022-08-31,C2209-2,near,black sea bass,9,9
+2022-08-31,J11,far,black sea bass,1,1
+2023-05-04,C2305-1,near,black sea bass,7,7
+2023-05-04,C2305-2,far,black sea bass,6,6
+2023-05-04,C2305-2,near,black sea bass,8,8
+2023-05-04,C2305-1,far,black sea bass,6,6
+2022-08-31,C2209-1,far,black sea bass,5,5
+2022-08-03,J12,near,black sea bass,1,1
+2022-08-03,L12,far,black sea bass,1,1
+2022-08-03,L12,near,black sea bass,1,1
+2022-08-03,J06,near,black sea bass,4,4
+2022-08-03,J12,far,black sea bass,1,1
+2022-08-31,O12,near,black sea bass,17,17
+2023-04-13,C2304-1,far,black sea bass,3,3
+2022-08-31,K10,near,black sea bass,4,4
+2024-09-11,C2409-1,near,black sea bass,2,2
+2024-09-11,C2409-2,far,black sea bass,6,6
+2024-09-11,C2409-2,near,black sea bass,5,5
+2024-08-02,UM-16,far,black sea bass,7,7
+2024-08-02,UM-16,near,black sea bass,4,4
+2024-09-11,C2409-1,far,black sea bass,3,3
+2022-08-31,C2209-1,near,black sea bass,4,4
+2022-08-03,N12,far,black sea bass,8,8
+2022-08-03,N12,near,black sea bass,7,7
+2024-08-02,C2407-2,far,black sea bass,2,2
+2024-11-20,UL-12,far,black sea bass,3,3
+2024-11-20,UL-12,near,black sea bass,1,1
+2024-11-20,C2411-2,near,conger eel,1,1
+2024-11-20,UJ-11,far,black sea bass,2,2
+2024-11-20,UJ-11,near,black sea bass,4,4
+2024-11-20,UJ-11,near,leatherjacket,1,1
+2024-09-11,UL-14,far,butterfish,1,1
+2024-09-11,UL-14,near,black sea bass,1,1
+2022-06-30,C2206-1,far,black sea bass,9,9
+2024-11-20,UM-16,near,conger eel,1,1
+2024-09-11,UL-14,far,black sea bass,5,6
+2024-08-02,C2407-01,near,black sea bass,0,1
+2024-11-20,C2411-1,far,lingcod,0,1
+2024-08-02,C2407-01,far,black sea bass,0,1
+2023-05-04,M12,far,black sea bass,25,26
+2023-06-07,C2306-1,near,black sea bass,3,4
+2023-08-30,M10,far,black sea bass,7,8
+2022-07-20,C2207-2,far,black sea bass,2,3
+2022-06-30,C2206-2,near,black sea bass,10,11
+2024-09-11,UL-12,near,summer flounder,1,2
+2023-06-28,L10,far,black sea bass,1,2
+2023-04-13,M09,near,black sea bass,22,23
+2023-04-13,M10,near,black sea bass,2,3
+2022-07-20,J06,far,black sea bass,6,8
+2024-09-11,UL-12,,butterfish,0,2
+2024-09-11,UL-12,near,butterfish,0,2
+2022-07-20,C2207-1,far,black sea bass,16,18
+2023-10-05,C2310-1,far,scup,1,3
+2023-06-28,C2306_2-1,near,black sea bass,0,2
+2024-09-11,UL-12,near,black sea bass,8,14
+2023-11-16,C2311-1,far,scup,0,10
+2023-10-05,C2310-1,near,black sea bass,15,29
+2024-09-11,UL-12,,black sea bass,0,17
