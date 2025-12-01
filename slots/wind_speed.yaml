@@ -1,9 +1,11 @@
 wind_speed:
-  description: Wind speed measurement
+  description: Estimated wind speed in knots.
   range: string
   pattern: "^(<\\d+|\\d+-\\d+|\\d+\\+?)$"
+  unit:
+    ucum_code: "[kn_i]"
   related_mappings:
-  - dwc:measurementValue
+    - dwc:measurementValue
   annotations:
     transformation_type: pivot_to_mof
     transformation_note: Wind speed becomes MeasurementOrFact linked to Station eventID
@@ -17,5 +19,4 @@ wind_speed:
     - value: "12"
       description: Exactly 12
   comments:
-    - units unknown
     - pattern allows values expressed as 'less than', a dashed 'range', or greater than, expressed with a '+'. See examples.
