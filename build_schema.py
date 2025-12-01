@@ -30,5 +30,6 @@ with open(output, 'w') as out:
     for slot_file in sorted(Path('slots').glob('*.yaml')):
         for line in slot_file.read_text().splitlines():
             out.write(f'  {line}\n' if line.strip() else '\n')
+        out.write('\n')  # blank line between slots
 
 print(f'Schema written to {output}')

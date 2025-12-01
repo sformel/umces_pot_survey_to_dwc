@@ -319,6 +319,7 @@ slots:
       transformation_note: Barotrauma observation should be appended to occurrenceRemarks
     comments:
       - "Barotrauma started being recorded on the 2306 cruise, as some fish with everted stomachs would have false-empty stomachs"
+
   Catch:
     description: |
       Catch count. Accepts integer values or "NA" (pot was empty).
@@ -330,6 +331,7 @@ slots:
     annotations:
       transformation_type: direct
       transformation_note: Catch count maps directly to individualCount
+
   Date:
     description: Date of animal measurements
     range: datetime
@@ -343,6 +345,7 @@ slots:
       - Date
     comments:
       - Must be ISO-8601 formatted, like YYYY-mm-DD
+
   Near_Far:
     description: |
       Position relative to reference point (near/far). If station begins with C then it's a control for an area. If station doesn't begin with C it's the name of a proposed structure. Coordinates for the structure (and threfore reference point) are available through the BOEM Constructions and Operations (COP) Plan: https://www.boem.gov/sites/default/files/documents/renewable-energy/state-activities/App-I-F-WTG-OSS-Locations.pdf 
@@ -354,6 +357,7 @@ slots:
       transformation_note: Distance category becomes MeasurementOrFact
     alias:
       - "Near/Far"
+
   Pot_ID:
     description: Pot/trap identifier
     range: integer
@@ -362,6 +366,7 @@ slots:
     annotations:
       transformation_type: pivot_to_mof
       transformation_note: Pot ID becomes MeasurementOrFact; also used in eventID construction
+
   Pot_position:
     description: Pot position in string (1-15)
     range: integer
@@ -370,6 +375,7 @@ slots:
     annotations:
       transformation_type: pivot_to_mof
       transformation_note: Pot position becomes MeasurementOrFact linked to Station or Pot eventID
+
   Recover_date:
     description: Date (recovery of Pot?)
     range: datetime
@@ -381,6 +387,7 @@ slots:
       transformation_note: Recovery date maps to eventDate for Occurrence records
     comments:
       - Must be ISO-8601 formatted, like YYYY-mm-DD
+
   Retained:
     description: Whether specimen was retained
     range: RetainedEnum
@@ -389,6 +396,7 @@ slots:
     annotations:
       transformation_type: pivot_to_mof
       transformation_note: Retained status becomes MeasurementOrFact with measurementType='retained'
+
   Sex:
     description: Sex of organism
     range: SexEnum
@@ -397,6 +405,7 @@ slots:
     annotations:
       transformation_type: direct
       transformation_note: Sex maps directly to dwc:sex
+
   Species:
     description: Species common name
     range: TaxonEnum
@@ -408,6 +417,7 @@ slots:
     annotations:
       transformation_type: direct
       transformation_note: Common name maps to vernacularName; scientificName should be looked up from taxonomy
+
   TL_mm:
     description: Total length in millimeters. The tip of the snout in a straight line to the posterior end of the caudal fin. 
     range: integer
@@ -420,6 +430,7 @@ slots:
     annotations:
       transformation_type: pivot_to_mof
       transformation_note: Pivot to MeasurementOrFact with measurementType='total length', measurementValue=TL_mm, measurementUnit='mm'
+
   Wt_g:
     description: Weight measurement (calculated). NA if not recorded.
     any_of:
@@ -432,6 +443,7 @@ slots:
     annotations:
       transformation_type: pivot_to_mof
       transformation_note: Calculated weight - pivot to MeasurementOrFact
+
   Wt_g_recorded:
     description: Weight measurement (recorded). NA if not recorded.
     any_of:
@@ -444,6 +456,7 @@ slots:
     annotations:
       transformation_type: pivot_to_mof
       transformation_note: Recorded weight - may differ from calculated weight, can be separate MeasurementOrFact
+
   cloud_cover_10th:
     description: Cloud cover percentage estimated to the nearest 10%.
     range: string
@@ -469,6 +482,7 @@ slots:
         description: Nighttime (not observable)
       - value: "sunrise"
         description: Sunrise conditions
+
   cruise_id:
     description: Cruise identifier
     range: string
@@ -487,6 +501,7 @@ slots:
         description: June 2023, second cruise
       - value: "2410"
         description: October 2024 cruise
+
   datetime:
     description: Date for station visit
     range: datetime
@@ -499,6 +514,7 @@ slots:
     comments:
       - Must be ISO-8601 formatted, like YYYY-mm-DDTHH:MM:SS TZ
       - datetime could be confusing with the LinkML range type, datetime
+
   depth:
     description: Depth measurement in feet.
     range: float
@@ -513,6 +529,7 @@ slots:
       transformation_note: Single depth value maps to both minimumDepthInMeters and maximumDepthInMeters after converting from feet to meters.
     comments:
       - pattern assumes positive number with an option to specify the tenths place.
+
   hobo_id:
     description: HOBO data logger identifier
     range: string
@@ -523,6 +540,7 @@ slots:
       transformation_note: HOBO logger ID becomes MeasurementOrFact linked to Station eventID
     comments:
       - assuming this is a data logger
+
   lat_end:
     description: End latitude coordinate
     range: float
@@ -537,6 +555,7 @@ slots:
       transformation_type: construct_wkt
       transformation_note: End latitude used in footprintWKT LINESTRING construction for parent cruise events
       geodeticDatum: WGS84
+
   lat_start:
     description: Start latitude coordinate
     range: float
@@ -551,6 +570,7 @@ slots:
       transformation_type: direct
       transformation_note: Start latitude maps to decimalLatitude for Event; also used in footprintWKT
     geodeticDatum: WGS84
+
   lon_end:
     description: End longitude coordinate
     range: float
@@ -565,6 +585,7 @@ slots:
       transformation_type: construct_wkt
       transformation_note: End longitude used in footprintWKT LINESTRING construction for parent cruise events
     geodeticDatum: WGS84
+
   lon_start:
     description: Start longitude coordinate
     range: float
@@ -579,6 +600,7 @@ slots:
       transformation_type: direct
       transformation_note: Start longitude maps to decimalLongitude for Event; also used in footprintWKT
     geodeticDatum: WGS84
+
   notes:
     description: Notes or remarks
     range: string
@@ -590,6 +612,7 @@ slots:
       transformation_note: Maps to eventRemarks in Station/Event context, occurrenceRemarks in CPUE/Occurrence context
     alias:
       - Notes
+
   old_station:
     description: >-
         Legacy station identifier. Multiple naming conventions used:
@@ -614,6 +637,7 @@ slots:
       - "Switched from using underscores to dashes after 2022-09-01, as the GPS does not read underscores"
     alias:
       - Old_Station
+
   participants:
     description: Participants. Crew members present during sampling (comma-separated).
     range: participantEnum
@@ -625,6 +649,7 @@ slots:
       transformation_note: Participant initials map to recordedBy
     comments:
       - inclusion of 'multivalued' alllows for the comma separation
+
   ropeless_id:
     description: Ropeless gear identifier
     range: string
@@ -635,6 +660,7 @@ slots:
       transformation_note: Ropeless gear ID becomes MeasurementOrFact linked to Station eventID
     comments: 
       - unsure what possible values might exist
+
   scale_tare_g:
     description: Tare weight for scale
     range: integer
@@ -647,6 +673,7 @@ slots:
       transformation_note: Tare weight for scale - can be MeasurementOrFact or omitted
     comments: 
       - "Switch from spring scale to self-taring scale from 2308 cruise on"
+
   station:
     alias:
       - Station
@@ -677,6 +704,7 @@ slots:
     annotations:
       transformation_type: direct
       transformation_note: Station identifier becomes both eventID and locationID
+
   surf_temp_f:
     description: Surface temperature in Fahrenheit
     range: float
@@ -692,6 +720,7 @@ slots:
       transformation_note: Surface temperature becomes MeasurementOrFact linked to Station eventID
     comments:
       - pattern assumes number between 30 - 110 with an option to specify the tenths place.
+
   type:
     description: Event type (deploy or recover)
     range: DeploymentType
@@ -700,6 +729,7 @@ slots:
     annotations:
       transformation_type: direct
       transformation_note: Type maps directly to eventType
+
   wave_height:
     description: Estimated wave height in feet, measured from trough to crest.
     range: string
@@ -721,6 +751,7 @@ slots:
         description: 5.5
       - value: "3"
         description: 3
+
   wind_dir:
     description: Wind direction
     range: CardinalDirection
@@ -729,6 +760,7 @@ slots:
     annotations:
       transformation_type: pivot_to_mof
       transformation_note: Wind direction becomes MeasurementOrFact linked to Station eventID
+
   wind_speed:
     description: Estimated wind speed in knots.
     range: string
@@ -751,3 +783,4 @@ slots:
         description: Exactly 12
     comments:
       - pattern allows values expressed as 'less than', a dashed 'range', or greater than, expressed with a '+'. See examples.
+
