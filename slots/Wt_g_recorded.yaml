@@ -1,5 +1,5 @@
 Wt_g_recorded:
-  description: Weight measurement (recorded)
+  description: Weight measurement (recorded). NA if not recorded.
   any_of:
     - range: float
     - range: NotRecorded
