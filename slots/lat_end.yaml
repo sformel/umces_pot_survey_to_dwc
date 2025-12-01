@@ -3,10 +3,12 @@ lat_end:
   range: float
   minimum_value: -90
   maximum_value: 90
+  unit:
+    ucum_code: deg
   related_mappings:
-  - dwc:footprintWKT
+    - dwc:footprintWKT
+    - dwc:geodeticDatum
   annotations:
     transformation_type: construct_wkt
     transformation_note: End latitude used in footprintWKT LINESTRING construction for parent cruise events
-  comments:
-    - assuming these are decimal degrees in WGS84
+    geodeticDatum: WGS84
