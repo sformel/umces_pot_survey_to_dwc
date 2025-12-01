@@ -8,15 +8,15 @@ output = sys.argv[1] if len(sys.argv) > 1 else 'entire_schema.yml'
 
 with open(output, 'w') as out:
     # Schema metadata
-    out.write(Path('schema_metadata.yml').read_text())
+    out.write(Path('other_elements/schema_metadata.yml').read_text())
     out.write('\n')
     
     # Enums
-    out.write(Path('enums.yml').read_text())
+    out.write(Path('other_elements/enums.yml').read_text())
     out.write('\n')
     
     # Classes
-    out.write(Path('classes.yml').read_text())
+    out.write(Path('other_elements/classes.yml').read_text())
     out.write('\n')
     
     # Slots

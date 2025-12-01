@@ -16,6 +16,97 @@ enums:
         description: Pot was empty (zero catch)
         meaning: NCIT:C48660
 
+  TaxonEnum:
+    description: Taxa observed in the survey
+    permissible_values:
+      atl lobster:
+        meaning: worms:156134
+        description: Homarus americanus
+      black sea bass:
+        meaning: worms:159348
+        description: Centropristis striata
+      blue crab:
+        meaning: worms:107379
+        description: Callinectes sapidus
+      butterfish:
+        meaning: worms:159828
+        description: Peprilus triacanthus
+      clam:
+        meaning: worms:156996
+        description: Spisula solidissima
+      conger eel:
+        meaning: worms:158566
+        description: Conger oceanicus
+      hermit crab:
+        meaning: worms:366751
+        description: Pagurus pollicaris
+      jonah crab:
+        meaning: worms:158056
+        description: Cancer borealis
+      lady crab:
+        meaning: worms:158434
+        description: Ovalipes ocellatus
+      leatherjacket:
+        meaning: worms:307126
+        description: Stephanolepis hispida
+      lingcod:
+        meaning: worms:158991
+        description: Urophycis regia
+      moon jelly:
+        meaning: worms:135306
+        description: Aurelia aurita
+      mud crab:
+        meaning: worms:158436
+        description: Panopeus herbstii
+      porgy:
+        meaning: worms:159811
+        description: Stenotomus chrysops
+      rock crab:
+        meaning: worms:158057
+        description: Cancer irroratus
+      sand dollar:
+        meaning: worms:158062
+        description: Echinarachnius parma
+      scallop:
+        meaning: worms:156972
+        description: Placopecten magellanicus
+      scup:
+        meaning: worms:159811
+        description: Stenotomus chrysops
+      seahorse:
+        meaning: worms:159445
+        description: Hippocampus erectus
+      sea robin:
+        meaning: worms:159571
+        description: Prionotus carolinus
+      n searobin:
+        meaning: worms:159571
+        description: Prionotus carolinus
+      sea star:
+        meaning: worms:158489
+        description: Asterias forbesi
+      sea urchin:
+        meaning: worms:158058
+        description: Arbacia punctulata
+      snail:
+        meaning: worms:160461
+        description: Polinices duplicatus
+      spot:
+        meaning: worms:159322
+        description: Leiostomus xanthurus
+      spotted hake:
+        meaning: worms:158991
+        description: Urophycis regia
+      summer flounder:
+        meaning: worms:158826
+        description: Paralichthys dentatus
+      triggerfish:
+        meaning: worms:154721
+        description: Balistes capriscus
+      windowpane:
+        meaning: worms:158907
+        description: Scophthalmus aquosus
+  
   CardinalDirection:
     permissible_values:
       N:

@@ -16,6 +16,7 @@ prefixes:
   dwc: http://rs.tdwg.org/dwc/terms/
   s10: http://vocab.nerc.ac.uk/collection/S10/current/
   P01: http://vocab.nerc.ac.uk/collection/P01/current/
+  worms: "urn:lsid:marinespecies.org:taxname:"
 default_prefix: umces
 imports:
 - linkml:types

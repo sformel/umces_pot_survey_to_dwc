@@ -14,6 +14,9 @@ prefixes:
   linkml: https://w3id.org/linkml/
   umces: https://example.org/umces/
   dwc: http://rs.tdwg.org/dwc/terms/
+  s10: http://vocab.nerc.ac.uk/collection/S10/current/
+  P01: http://vocab.nerc.ac.uk/collection/P01/current/
+  worms: "urn:lsid:marinespecies.org:taxname:"
 default_prefix: umces
 imports:
 - linkml:types
@@ -24,6 +27,109 @@ imports:
 ################################################################################
 
 enums:
+  NotRecorded:
+    permissible_values:
+      NA:
+        description: Value was not recorded
+        meaning: NCIT:C17998  # "Unknown" or use another appropriate term
+        
+  CatchNA:
+    permissible_values:
+      NA:
+        description: Pot was empty (zero catch)
+        meaning: NCIT:C48660
+
+  TaxonEnum:
+    description: Taxa observed in the survey
+    permissible_values:
+      atl lobster:
+        meaning: worms:156134
+        description: Homarus americanus
+      black sea bass:
+        meaning: worms:159348
+        description: Centropristis striata
+      blue crab:
+        meaning: worms:107379
+        description: Callinectes sapidus
+      butterfish:
+        meaning: worms:159828
+        description: Peprilus triacanthus
+      clam:
+        meaning: worms:156996
+        description: Spisula solidissima
+      conger eel:
+        meaning: worms:158566
+        description: Conger oceanicus
+      hermit crab:
+        meaning: worms:366751
+        description: Pagurus pollicaris
+      jonah crab:
+        meaning: worms:158056
+        description: Cancer borealis
+      lady crab:
+        meaning: worms:158434
+        description: Ovalipes ocellatus
+      leatherjacket:
+        meaning: worms:307126
+        description: Stephanolepis hispida
+      lingcod:
+        meaning: worms:158991
+        description: Urophycis regia
+      moon jelly:
+        meaning: worms:135306
+        description: Aurelia aurita
+      mud crab:
+        meaning: worms:158436
+        description: Panopeus herbstii
+      porgy:
+        meaning: worms:159811
+        description: Stenotomus chrysops
+      rock crab:
+        meaning: worms:158057
+        description: Cancer irroratus
+      sand dollar:
+        meaning: worms:158062
+        description: Echinarachnius parma
+      scallop:
+        meaning: worms:156972
+        description: Placopecten magellanicus
+      scup:
+        meaning: worms:159811
+        description: Stenotomus chrysops
+      seahorse:
+        meaning: worms:159445
+        description: Hippocampus erectus
+      sea robin:
+        meaning: worms:159571
+        description: Prionotus carolinus
+      n searobin:
+        meaning: worms:159571
+        description: Prionotus carolinus
+      sea star:
+        meaning: worms:158489
+        description: Asterias forbesi
+      sea urchin:
+        meaning: worms:158058
+        description: Arbacia punctulata
+      snail:
+        meaning: worms:160461
+        description: Polinices duplicatus
+      spot:
+        meaning: worms:159322
+        description: Leiostomus xanthurus
+      spotted hake:
+        meaning: worms:158991
+        description: Urophycis regia
+      summer flounder:
+        meaning: worms:158826
+        description: Paralichthys dentatus
+      triggerfish:
+        meaning: worms:154721
+        description: Balistes capriscus
+      windowpane:
+        meaning: worms:158907
+        description: Scophthalmus aquosus
+  
   CardinalDirection:
     permissible_values:
       N:
@@ -43,11 +149,17 @@ enums:
       SW:
         description: Southwest
   SexEnum:
+    description: "Sex categories from NERC S10 vocabulary (a subset)."
     permissible_values:
       F:
-        description: Female
+        meaning: s10:S102
+        description: "Female"  
+      I:
+        meaning: s10:S105
+        description: "Indeterminate"  
       M:
-        description: Male
+        meaning: s10:S103
+        description: "Male" 
 
   participantEnum:
     description: Personnel involved in ocean sampling operations
@@ -208,15 +320,16 @@ slots:
     comments:
       - "Barotrauma started being recorded on the 2306 cruise, as some fish with everted stomachs would have false-empty stomachs"
   Catch:
-    description: Catch count
-    range: integer
+    description: |
+      Catch count. Accepts integer values or "NA" (pot was empty).
+    any_of:
+      - range: integer
+      - range: CatchNA
     exact_mappings:
-    - dwc:individualCount
+      - dwc:individualCount
     annotations:
       transformation_type: direct
       transformation_note: Catch count maps directly to individualCount
-    comments:
-      - "TODO: Clarify meaning of NA values - could indicate: no catch (0), not recorded, or not applicable"
   Date:
     description: Date of animal measurements
     range: datetime
@@ -231,10 +344,11 @@ slots:
     comments:
       - Must be ISO-8601 formatted, like YYYY-mm-DD
   Near_Far:
-    description: Position relative to reference point (near/far)
+    description: |
+      Position relative to reference point (near/far). If station begins with C then it's a control for an area. If station doesn't begin with C it's the name of a proposed structure. Coordinates for the structure (and threfore reference point) are available through the BOEM Constructions and Operations (COP) Plan: https://www.boem.gov/sites/default/files/documents/renewable-energy/state-activities/App-I-F-WTG-OSS-Locations.pdf 
     range: string
     related_mappings:
-    - dwc:measurementValue
+      - dwc:measurementValue
     annotations:
       transformation_type: pivot_to_mof
       transformation_note: Distance category becomes MeasurementOrFact
@@ -284,32 +398,33 @@ slots:
       transformation_type: direct
       transformation_note: Sex maps directly to dwc:sex
   Species:
-    description: Species name
-    range: string
+    description: Species common name
+    range: TaxonEnum
     close_mappings:
-    - dwc:vernacularName
+      - dwc:vernacularName
     related_mappings:
-    - dwc:scientificName
+      - dwc:scientificName
+      - dwc:scientificNameID
     annotations:
       transformation_type: direct
       transformation_note: Common name maps to vernacularName; scientificName should be looked up from taxonomy
-    comments:
-      - not clear what values are permissible or where they're defined
   TL_mm:
-    description: Length measurement (Total length?)
+    description: Total length in millimeters. The tip of the snout in a straight line to the posterior end of the caudal fin. 
     range: integer
     unit:
       ucum_code: mm
+    exact_mappings:
+      - P01:TL01XX01
     related_mappings:
     - dwc:measurementValue
     annotations:
       transformation_type: pivot_to_mof
       transformation_note: Pivot to MeasurementOrFact with measurementType='total length', measurementValue=TL_mm, measurementUnit='mm'
-    comments:
-      - not clear what measurement method is
   Wt_g:
-    description: Weight measurement (calculated)
-    range: integer
+    description: Weight measurement (calculated). NA if not recorded.
+    any_of:
+      - range: float
+      - range: NotRecorded
     unit:
       ucum_code: g
     related_mappings:
@@ -317,11 +432,11 @@ slots:
     annotations:
       transformation_type: pivot_to_mof
       transformation_note: Calculated weight - pivot to MeasurementOrFact
-    comments:
-      - not clear what NA values signify
   Wt_g_recorded:
-    description: Weight measurement (recorded)
-    range: integer
+    description: Weight measurement (recorded). NA if not recorded.
+    any_of:
+      - range: float
+      - range: NotRecorded
     unit:
       ucum_code: g
     related_mappings:
@@ -329,10 +444,8 @@ slots:
     annotations:
       transformation_type: pivot_to_mof
       transformation_note: Recorded weight - may differ from calculated weight, can be separate MeasurementOrFact
-    comments:
-      - not clear what NA values signify
   cloud_cover_10th:
-    description: Cloud cover in ?
+    description: Cloud cover percentage estimated to the nearest 10%.
     range: string
     related_mappings:
     - dwc:measurementValue
@@ -340,7 +453,6 @@ slots:
       transformation_type: pivot_to_mof
       transformation_note: Cloud cover becomes MeasurementOrFact linked to Station eventID
     comments:
-      - Units unknown, appears to be standard scale of 0-10 with special exceptions.
       - Special values used for conditions that prevent observation (smog, night)
     examples:
       - value: "5"
@@ -388,17 +500,18 @@ slots:
       - Must be ISO-8601 formatted, like YYYY-mm-DDTHH:MM:SS TZ
       - datetime could be confusing with the LinkML range type, datetime
   depth:
-    description: Depth measurement
+    description: Depth measurement in feet.
     range: float
     pattern: "^\\d+(\\.\\d)?$"
+    unit:
+      ucum_code: "[ft_i]"
     close_mappings:
     - dwc:minimumDepthInMeters
     - dwc:maximumDepthInMeters
     annotations:
       transformation_type: duplicate
-      transformation_note: Single depth value maps to both minimumDepthInMeters and maximumDepthInMeters after ensuring units are meters.
+      transformation_note: Single depth value maps to both minimumDepthInMeters and maximumDepthInMeters after converting from feet to meters.
     comments:
-      - units unknown
       - pattern assumes positive number with an option to specify the tenths place.
   hobo_id:
     description: HOBO data logger identifier
@@ -415,49 +528,57 @@ slots:
     range: float
     minimum_value: -90
     maximum_value: 90
+    unit:
+      ucum_code: deg
     related_mappings:
-    - dwc:footprintWKT
+      - dwc:footprintWKT
+      - dwc:geodeticDatum
     annotations:
       transformation_type: construct_wkt
       transformation_note: End latitude used in footprintWKT LINESTRING construction for parent cruise events
-    comments:
-      - assuming these are decimal degrees in WGS84
+      geodeticDatum: WGS84
   lat_start:
     description: Start latitude coordinate
     range: float
     minimum_value: -90
     maximum_value: 90
+    unit:
+      ucum_code: deg
     exact_mappings:
-    - dwc:decimalLatitude
+      - dwc:decimalLatitude
+      - dwc:geodeticDatum
     annotations:
       transformation_type: direct
       transformation_note: Start latitude maps to decimalLatitude for Event; also used in footprintWKT
-    comments:
-      - assuming these are decimal degrees in WGS84
+    geodeticDatum: WGS84
   lon_end:
     description: End longitude coordinate
     range: float
     minimum_value: -180
     maximum_value: 180
+    unit:
+      ucum_code: deg
     related_mappings:
-    - dwc:footprintWKT
+      - dwc:footprintWKT
+      - dwc:geodeticDatum
     annotations:
       transformation_type: construct_wkt
       transformation_note: End longitude used in footprintWKT LINESTRING construction for parent cruise events
-    comments:
-      - assuming these are decimal degrees in WGS84
+    geodeticDatum: WGS84
   lon_start:
     description: Start longitude coordinate
     range: float
     minimum_value: -180
     maximum_value: 180
+    unit:
+      ucum_code: deg
     exact_mappings:
-    - dwc:decimalLongitude
+      - dwc:decimalLongitude
+      - dwc:geodeticDatum
     annotations:
       transformation_type: direct
       transformation_note: Start longitude maps to decimalLongitude for Event; also used in footprintWKT
-    comments:
-      - assuming these are decimal degrees in WGS84
+    geodeticDatum: WGS84
   notes:
     description: Notes or remarks
     range: string
@@ -580,8 +701,10 @@ slots:
       transformation_type: direct
       transformation_note: Type maps directly to eventType
   wave_height:
-    description: Wave height measurement
+    description: Estimated wave height in feet, measured from trough to crest.
     range: string
+    unit:
+      ucum_code: "[ft_i]"
     related_mappings:
     - dwc:measurementValue
     annotations:
@@ -598,8 +721,6 @@ slots:
         description: 5.5
       - value: "3"
         description: 3
-    comments:
-      - units unknown
   wind_dir:
     description: Wind direction
     range: CardinalDirection
@@ -609,11 +730,13 @@ slots:
       transformation_type: pivot_to_mof
       transformation_note: Wind direction becomes MeasurementOrFact linked to Station eventID
   wind_speed:
-    description: Wind speed measurement
+    description: Estimated wind speed in knots.
     range: string
     pattern: "^(<\\d+|\\d+-\\d+|\\d+\\+?)$"
+    unit:
+      ucum_code: "[kn_i]"
     related_mappings:
-    - dwc:measurementValue
+      - dwc:measurementValue
     annotations:
       transformation_type: pivot_to_mof
       transformation_note: Wind speed becomes MeasurementOrFact linked to Station eventID
@@ -627,5 +750,4 @@ slots:
       - value: "12"
         description: Exactly 12
     comments:
-      - units unknown
       - pattern allows values expressed as 'less than', a dashed 'range', or greater than, expressed with a '+'. See examples.
