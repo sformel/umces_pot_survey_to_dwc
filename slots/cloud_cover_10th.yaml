@@ -1,5 +1,5 @@
 cloud_cover_10th:
-  description: Cloud cover in ?
+  description: Cloud cover percentage estimated to the nearest 10%.
   range: string
   related_mappings:
   - dwc:measurementValue
@@ -7,7 +7,6 @@ cloud_cover_10th:
     transformation_type: pivot_to_mof
     transformation_note: Cloud cover becomes MeasurementOrFact linked to Station eventID
   comments:
-    - Units unknown, appears to be standard scale of 0-10 with special exceptions.
     - Special values used for conditions that prevent observation (smog, night)
   examples:
     - value: "5"
