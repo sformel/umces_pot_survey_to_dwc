@@ -1,0 +1,19 @@
+/* Fix the search bar at top, make only nav scroll */
+.wy-side-scroll {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.wy-side-nav-search {
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.wy-menu-vertical {
+  overflow-y: auto;
+  flex-grow: 1;
+}

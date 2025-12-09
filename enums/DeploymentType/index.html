@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>DeploymentType - UMCES Raw Pot Survey Data Schema</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "DeploymentType";
+        var mkdocs_page_input_path = "enums/DeploymentType.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> UMCES Raw Pot Survey Data Schema
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../..#data-dictionary">Data Dictionary</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#classes">Classes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../..#enumerations">Enumerations</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Classes</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../classes/CPUE/">CPUE</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../classes/CPUE/#attributes">Attributes</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../classes/Measurements/">Measurements</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../classes/Measurements/#attributes">Attributes</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../classes/Station/">Station</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../classes/Station/#attributes">Attributes</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Enumerations</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../CardinalDirection/">CardinalDirection</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../CardinalDirection/#permitted-values">Permitted Values</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CatchNA/">CatchNA</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../CatchNA/#permitted-values">Permitted Values</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">DeploymentType</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#permitted-values">Permitted Values</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../NotRecorded/">NotRecorded</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../NotRecorded/#permitted-values">Permitted Values</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../participantEnum/">participantEnum</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../participantEnum/#permitted-values">Permitted Values</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../RetainedEnum/">RetainedEnum</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../RetainedEnum/#permitted-values">Permitted Values</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SexEnum/">SexEnum</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../SexEnum/#permitted-values">Permitted Values</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../TaxonEnum/">TaxonEnum</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../TaxonEnum/#permitted-values">Permitted Values</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Data Dictionary</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/Barotrauma/">Barotrauma</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Barotrauma/#comments">Comments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Barotrauma/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Barotrauma/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Barotrauma/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/Catch/">Catch</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Catch/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Catch/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Catch/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/cloud_cover_10th/">cloud_cover_10th</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/cloud_cover_10th/#comments">Comments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/cloud_cover_10th/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/cloud_cover_10th/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/cloud_cover_10th/#examples">Examples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/cloud_cover_10th/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/cruise_id/">cruise_id</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/cruise_id/#comments">Comments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/cruise_id/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/cruise_id/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/cruise_id/#examples">Examples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/cruise_id/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/Date/">Date</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Date/#comments">Comments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Date/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Date/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Date/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/datetime/">datetime</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/datetime/#comments">Comments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/datetime/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/datetime/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/datetime/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/depth/">depth</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/depth/#comments">Comments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/depth/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/depth/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/depth/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/hobo_id/">hobo_id</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/hobo_id/#comments">Comments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/hobo_id/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/hobo_id/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/hobo_id/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/lat_end/">lat_end</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/lat_end/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/lat_end/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/lat_end/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/lat_start/">lat_start</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/lat_start/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/lat_start/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/lat_start/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/lon_end/">lon_end</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/lon_end/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/lon_end/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/lon_end/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/lon_start/">lon_start</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/lon_start/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/lon_start/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/lon_start/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/Near_Far/">Near_Far</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Near_Far/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Near_Far/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Near_Far/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/notes/">notes</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/notes/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/notes/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/notes/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/old_station/">old_station</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/old_station/#comments">Comments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/old_station/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/old_station/#examples">Examples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/old_station/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/participants/">participants</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/participants/#comments">Comments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/participants/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/participants/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/participants/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/Pot_ID/">Pot_ID</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Pot_ID/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Pot_ID/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Pot_ID/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/Pot_position/">Pot_position</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Pot_position/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Pot_position/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Pot_position/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/Recover_date/">Recover_date</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Recover_date/#comments">Comments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Recover_date/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Recover_date/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Recover_date/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/Retained/">Retained</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Retained/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Retained/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Retained/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/ropeless_id/">ropeless_id</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/ropeless_id/#comments">Comments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/ropeless_id/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/ropeless_id/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/ropeless_id/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/scale_tare_g/">scale_tare_g</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/scale_tare_g/#comments">Comments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/scale_tare_g/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/scale_tare_g/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/scale_tare_g/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/Sex/">Sex</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Sex/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Sex/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Sex/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/Species/">Species</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Species/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Species/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Species/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/station/">station</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/station/#comments">Comments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/station/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/station/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/station/#examples">Examples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/station/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/surf_temp_f/">surf_temp_f</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/surf_temp_f/#comments">Comments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/surf_temp_f/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/surf_temp_f/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/surf_temp_f/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/TL_mm/">TL_mm</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/TL_mm/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/TL_mm/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/TL_mm/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/type/">type</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/type/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/type/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/type/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/wave_height/">wave_height</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/wave_height/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/wave_height/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/wave_height/#examples">Examples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/wave_height/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/wind_dir/">wind_dir</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/wind_dir/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/wind_dir/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/wind_dir/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/wind_speed/">wind_speed</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/wind_speed/#comments">Comments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/wind_speed/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/wind_speed/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/wind_speed/#examples">Examples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/wind_speed/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/Wt_g/">Wt_g</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Wt_g/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Wt_g/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Wt_g/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../slots/Wt_g_recorded/">Wt_g_recorded</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Wt_g_recorded/#details">Details</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Wt_g_recorded/#annotations">Annotations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../slots/Wt_g_recorded/#used-in">Used In</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">UMCES Raw Pot Survey Data Schema</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Enumerations</li>
+      <li class="breadcrumb-item active">DeploymentType</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="deploymenttype">DeploymentType<a class="headerlink" href="#deploymenttype" title="Permanent link">&para;</a></h1>
+<p>Type of sampling event - deployment or recovery of gear</p>
+<h2 id="permitted-values">Permitted Values<a class="headerlink" href="#permitted-values" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>deploy</code></td>
+<td>Deployment of sampling gear</td>
+</tr>
+<tr>
+<td><code>recover</code></td>
+<td>Recovery of sampling gear</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../CatchNA/" class="btn btn-neutral float-left" title="CatchNA"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../NotRecorded/" class="btn btn-neutral float-right" title="NotRecorded">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../CatchNA/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../NotRecorded/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
